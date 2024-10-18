@@ -1,0 +1,2 @@
+# selfstudy next js project
+ 
