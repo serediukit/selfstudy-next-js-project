@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import type {Metadata} from "next";
+import {Nunito} from "next/font/google";
 import "./globals.css";
+import {Header} from "@/components/shared/header";
 
 const nunito = Nunito({
     subsets: ["cyrillic"],
@@ -9,22 +10,21 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Self study project",
+    title: "Self study project",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+export default function RootLayout({children}: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={nunito.className}>
+    return (
+        <html lang="en">
+        <body
+            className={nunito.className}>
         <main className='min-h-screen'>
+            <Header/>
             {children}
         </main>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }
