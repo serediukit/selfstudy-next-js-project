@@ -1,5 +1,5 @@
 import React from 'react';
-import {Title, FilterCheckbox} from "@/components/shared";
+import {Title, FilterCheckbox, CheckboxFiltersGroup} from "@/components/shared";
 import {Input, RangeSlider} from "@/components/ui";
 
 interface Props {
@@ -27,7 +27,87 @@ export const Filters: React.FC<Props> = ({className}) => {
                 <RangeSlider min={0} max={1000} step={10} value={[0, 1000]}/>
             </div>
 
-
+            <CheckboxFiltersGroup
+                className="mt-5"
+                title="Формат"
+                limit={6}
+                defaultItems={[
+                    {
+                        text: 'Сирний соус',
+                        value: '1',
+                    },
+                    {
+                        text: 'Моцарела',
+                        value: '2',
+                    },
+                    {
+                        text: 'Часник',
+                        value: '3',
+                    },
+                    {
+                        text: 'Солені огірочки',
+                        value: '4',
+                    },
+                    {
+                        text: 'Червона цибуля',
+                        value: '5',
+                    },
+                    {
+                        text: 'Томати',
+                        value: '6',
+                    },
+                ]}
+                items={[
+                    {
+                        text: 'Сирний соус',
+                        value: '1',
+                    },
+                    {
+                        text: 'Моцарела',
+                        value: '2',
+                    },
+                    {
+                        text: 'Часник',
+                        value: '3',
+                    },
+                    {
+                        text: 'Солені огірочки',
+                        value: '4',
+                    },
+                    {
+                        text: 'Червона цибуля',
+                        value: '5',
+                    },
+                    {
+                        text: 'Томати',
+                        value: '6',
+                    },
+                    {
+                        text: 'Сирний соус',
+                        value: '1',
+                    },
+                    {
+                        text: 'Моцарела',
+                        value: '2',
+                    },
+                    {
+                        text: 'Часник',
+                        value: '3',
+                    },
+                    {
+                        text: 'Солені огірочки',
+                        value: '4',
+                    },
+                    {
+                        text: 'Червона цибуля',
+                        value: '5',
+                    },
+                    {
+                        text: 'Томати',
+                        value: '6',
+                    },
+                ]}
+            />
         </div>
     )
 }
